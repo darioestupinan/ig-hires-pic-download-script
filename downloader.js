@@ -40,7 +40,6 @@ function openInNewTab(url) {
     var win = window.open(url, '_blank');
     win.focus();
 }
-
 function addLinkToImageInPage(url, pos) {
     var elemDiv = document.createElement('div');
     var id = `ig-hires-img-${pos}`;
