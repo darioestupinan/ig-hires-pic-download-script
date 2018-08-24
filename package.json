@@ -1,0 +1,15 @@
+{
+  "name": "ig-downloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/downloader.js",
+  "scripts": {
+    "minify": "babel src -d lib"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
