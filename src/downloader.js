@@ -63,7 +63,9 @@ function addLinksToPage(imageLinks){
     }
 }
 
-var images = document.getElementsByTagName('img');
-var result = getImageElementsWithSrcSet(images);
-var link = getListOf1080Images(result);
-addLinksToPage(link);
+function OpenHiResImageInOtherTab(){
+    var images = document.getElementsByTagName('img');
+    var result = getImageElementsWithSrcSet(images);
+    var link = getListOf1080Images(result);
+    addLinksToPage(link);
+}
