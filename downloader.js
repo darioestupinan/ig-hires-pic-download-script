@@ -47,18 +47,12 @@ function addLinkToImageInPage(url, pos) {
     elemDiv['id'] = id;
     elemDiv.id = id;
     elemDiv.attributes['id'] = id;
-    //elemDiv.createAttribute('id', id);
-
-    var onclick = `openInNewTab(${url})`;
-
-    elemDiv['onclick'] = onclick;
-    elemDiv.onclick = onclick;
-    elemDiv.attributes['onclick'] = onclick;
-    //elemDiv.createAttribute('onclick', onclick);
-
+    
+    elemDiv.onclick = openInNewTab(url);
+    
     elemDiv.innerHTML = `Download image`;
 
-    elemDiv.style.cssText = 'position:absolute;width:100%;height:100%;opacity:0.3;z-index:100;background:#000;';
+    elemDiv.style.cssText = 'height:50px';
 
     document.getElementsByTagName('article')[1].append(elemDiv);
 }
