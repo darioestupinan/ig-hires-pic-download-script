@@ -16,30 +16,30 @@ function getAllLinksWithContainsKeyWords(args){
     var patterns = createRegexToSearchWithArgs(args);
     
     var result = [];
-    hrefs.forEach(element => {
+    hrefs.forEach(function(element) {
         if (elementMatchesAllPatterns(element, patterns)){            
             result.push(element);
         }
     });
-    return result;
+    return result.join("\n");
 }
 function createRegexToSearchWithArgs(args) {
     var patternsToSearchFor = [];
     if (args) { //work on this!!
-        args.forEach(element => {
+        args.forEach(function(element) {
             var regex = new RegExp("\\b" + args + "\\b");
             patternsToSearchFor.push(regex);
         });
     } else {
-        patternsToSearchFor.push(new RegExp("\\b720\\b"));
+        patternsToSearchFor.push(new RegExp("\\b720p\\b"));
     }
 
     return patternsToSearchFor;
 }
 
 function elementMatchesAllPatterns(element, patterns) {
-    for (let index = 0; index < patterns.length; index++) {
-        const pattern = patterns[index]; 
+    for (var index = 0; index < patterns.length; index++) {
+        var pattern = patterns[index]; 
         if (pattern.test(element)) {
             continue;
         } else {
